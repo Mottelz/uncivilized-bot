@@ -12,5 +12,10 @@
     "humour"
   ],
   "author": "mottelz",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^5.4.0",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.0.0"
+  }
 }
