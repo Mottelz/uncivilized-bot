@@ -1,0 +1,16 @@
+{
+  "name": "uncivilized",
+  "version": "1.0.0",
+  "description": "A fan made discord bot for the Civilized podcast.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon node index.js"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "humour"
+  ],
+  "author": "mottelz",
+  "license": "MIT"
+}
