@@ -4,7 +4,7 @@
   "description": "A fan made discord bot for the Civilized podcast.",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon node index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "bot",
