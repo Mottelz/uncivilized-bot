@@ -32,7 +32,7 @@ checkCount = async () => {
     let count = await getCount();
     count = count - 1;
     if(count < 1) {
-        updateCount(Math.round(Math.random() * 25 + 25));
+        updateCount(Math.round(Math.random() * 13 + 7));
         return true
     } else {
         updateCount(count);
