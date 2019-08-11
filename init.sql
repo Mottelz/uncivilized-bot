@@ -5,3 +5,8 @@ CREATE TABLE deaths (
 CREATE TABLE count (
     count INTEGER
 );
+
+CREATE TABLE death_count (
+    count INTEGER,
+    id STRING
+);
