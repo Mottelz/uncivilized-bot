@@ -27,7 +27,7 @@ client.on('message', async msg => {
             msg.channel.send(msg.author + ' ' + method);
         }
 
-        if(msg.content == 'How many times?') {
+        if(msg.content === 'How many times?') {
             let myDeathCount = await getUserDeathCount(msg.author.id);
             if (myDeathCount < 1) {
                 msg.channel.send('We have no record of ' + msg.author + "s death.");
