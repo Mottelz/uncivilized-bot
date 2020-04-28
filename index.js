@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const Database = require('better-sqlite3');
 const db = new Database('deaths.db', { verbose: console.log });
+const safeChannels = ['703780109252821022'];
 
 
 //Once ready, notify that we're ready.
@@ -17,10 +18,8 @@ client.login(process.env.TOKEN);
 // The main loop
 client.on('message', async msg => {
     // If it's not the bot check is it's someone's time.
-    if(!msg.author.bot) {
-
+    if(!msg.author.bot && !safeChannels.includes(msg.channel.id)) {
         let itsTime = await checkCount();
-
         if (itsTime) {
             increaseUserDeathCount(msg.author.id);
             let method = await getDeath();
@@ -35,6 +34,9 @@ client.on('message', async msg => {
                 msg.channel.send(msg.author + ' has died ' + myDeathCount + ' times.');
             }
         }
+    }
+    else {
+        console.log(msg.content);
     }
 });
 
